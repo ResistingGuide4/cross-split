@@ -1,6 +1,12 @@
-import { Text, View } from "react-native";
+import { Alert, View } from "react-native";
+import TimerButton from "../components/timerButton.js";
 
 export default function Index() {
+
+  function handlePress() {
+    Alert.alert("You Pressed the Button!")
+  }
+
   return (
     <View
       style={{
@@ -9,7 +15,7 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+      <TimerButton onPress={handlePress} title="Button Yay!"></TimerButton>
     </View>
   );
 }
